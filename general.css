@@ -89,7 +89,7 @@ article.right-panel {
 
 
 /*header*/
-section.header {
+.header {
     background-color: #FFF;
     background: -moz-linear-gradient(left, #E5E5E5 0%,#FFF 9%,#E1EAF7 91%);
     background: -o-linear-gradient(left, #E5E5E5 0%,#FFF 9%,#E1EAF7 91%);
@@ -234,7 +234,7 @@ section.header {
 
 
 /*footer*/
-section.footer {
+.footer {
     height: 120px;
     width: 100%;
     display: table;
