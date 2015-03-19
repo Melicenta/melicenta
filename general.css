@@ -139,7 +139,7 @@ body{
 
 .footer span.left{
     display: table-cell;
-    width: auto;
+    width: 10%;
     padding-right: 50px;
     padding-left: 90px;
     vertical-align: middle;
@@ -151,7 +151,6 @@ body{
 
 .footer span.right{
     display: table-cell;
-    width: 30.3%;
     padding-left: 50px;
     vertical-align: middle;
     position: relative;
