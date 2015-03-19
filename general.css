@@ -4,8 +4,8 @@ html {
 }
 
 html, body {
-   height: 100%;
-    /*outline: none;*/
+  height: 100%;
+  /*outline: none;*/
 } 
 
 img{
@@ -13,12 +13,12 @@ img{
 }
 
 a {
-    text-decoration: none;
-    color: #546F81;
+  text-decoration: none;
+  color: #546F81;
 }
 
 a:visited {
-    color: #546F81;
+  color: #546F81;
 }
 
 body {
@@ -31,11 +31,11 @@ body {
 }
 
 .wrapper{
-   color: #414a51;
-   font-weight: 400;
-   font-size: 12pt;
-   font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   line-height: 1.2;
+  color: #414a51;
+  font-weight: 400;
+  font-size: 12pt;
+  font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.2;
 }
 
 .container {
@@ -69,7 +69,7 @@ body {
   font-family: Georgia, serif;
   margin: auto 100px;
   padding: 10px 0;
-  font-size: 40pt;
+  font-size: 25pt;
   font-style: oblique;
   color: #FFF;
 }
@@ -96,21 +96,21 @@ body {
 }
 
 .footer span.left{
-    display: table-cell;
-    padding-right: 50px;
-    padding-left: 20px;
-    vertical-align: middle;
-    text-align: left;
-    color: #A5A8AD;
-    box-shadow: 1px 0 0 #786693;
-    position: relative;
+  display: table-cell;
+  padding-right: 50px;
+  padding-left: 20px;
+  vertical-align: middle;
+  text-align: left;
+  color: #A5A8AD;
+  box-shadow: 1px 0 0 #786693;
+  position: relative;
 }
 
 .footer span.right{
-    display: table-cell;
-    padding-left: 50px;
-    vertical-align: middle;
-    position: relative;
+  display: table-cell;
+  padding-left: 50px;
+  vertical-align: middle;
+  position: relative;
 }
 
 .footer span.right ul{
@@ -119,16 +119,16 @@ body {
 }
 
 .footer span.right ul li{
-   display: inline-block;
-   padding: 0 20px 0 0;
+  display: inline-block;
+  padding: 0 20px 0 0;
 }
 
 .footer span.right li a{
-    color: #7E97A8;
+  color: #7E97A8;
 }
 
 .footer span.right li a:visited{
-    color: #7E97A8;
+  color: #7E97A8;
 }
 /*footer*/
 
@@ -136,54 +136,54 @@ body {
 
 /*additional styles and content sections*/
 .system-data {
-    display: none;
+  display: none;
 }
 
 .page-section {
-    background-color: inherit;
-    clear: both;
-    display: block;
-    margin: 5px 20px 25px 0;
-    padding-bottom: 20px;
+  background-color: inherit;
+  clear: both;
+  display: block;
+  margin: 5px 20px 25px 0;
+  padding-bottom: 20px;
 /*    border-bottom: 1px  #A1B6CD solid;*/
 }
 
 .page-section:first-child{
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .page-section:last-of-type {
-    border-bottom: none;
-    margin-bottom: 10px;
+  border-bottom: none;
+  margin-bottom: 10px;
 }
 
 .page-section.intoggleable .toggleable-title .toggle {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .page-section .button{
-    color: #FFF;
+  color: #FFF;
 }
 
 .list-section {
-    width: 95%;
-    margin: 0 auto;
-    background-color: inherit;
+  width: 95%;
+  margin: 0 auto;
+  background-color: inherit;
 }
 
 .landing-container{
-    margin: 100px 20px;
+  margin: 100px 20px;
 }
 
 .base-text {
-    width: 600px;
-    display: inline-table;
-    vertical-align: middle;
+  width: 600px;
+  display: inline-table;
+  vertical-align: middle;
 }
 
 .additional-button-container{
-    display: inline-table;
-    vertical-align: top;
+  display: inline-table;
+  vertical-align: top;
 }
 
 /*additional styles and content sections*/
