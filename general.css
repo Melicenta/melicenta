@@ -75,13 +75,12 @@ body{
 }
 
 .header p{
-    vertical-align: middle;
-    font-size: 1.8em;
-/*    font-family: proxima-nova,Helvetica,Arial,sans-serif;*/
-    letter-spacing: 0.05em;
-    color: #020406;
-/*    padding-left: 47px;*/
-    margin: 0;
+  font-family: Georgia, serif;
+  margin: auto 100px;
+  padding: 10px 0;
+  font-size: 40pt;
+  font-style: oblique;
+  color: #A9A9A9;
 }
 
 .header p:after {
