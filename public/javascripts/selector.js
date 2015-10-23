@@ -68,8 +68,6 @@ $(function () {
         var button3 = $('.single .switch-option');
 
         /*initialisation*/
-        selector(button1,true,true).init();
-        selector(button2,true,true).init();
         selector(button3,true,true).init();
 
 
