@@ -1,5 +1,14 @@
 extends ../layout
+block append scripts
+ script(src='/javascripts/selector.js')
+ script(src='/javascripts/expander.js')
+
 
 block content
- p.title= title
- p Welcome to #{title}
+ div.p-section
+  p.title= title
+  p There are a lot of UI controls which were created by myself for different projects
+ div.line-section
+  include ../parts/selector
+ div.line-section
+  include ../parts/expander

@@ -3,9 +3,10 @@ html
   head
     title= "Melicenta's personal page"
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='/javascripts/jquery-ui-1.11.4/external/jquery/jquery.js')
-    script(src='/javascripts/jquery-ui-1.11.4/jquery-ui.js')
-    script(src='/javascripts/menu.js')
+    block scripts
+     script(src='/javascripts/jquery-ui-1.11.4/external/jquery/jquery.js')
+     script(src='/javascripts/jquery-ui-1.11.4/jquery-ui.js')
+     script(src='/javascripts/menu.js')
   body
     include parts/header
     div.wrapper

@@ -1,0 +1,6 @@
+span.form-field-input
+ div.select.multi
+  ul
+   each val, index in ['one', 'two', 'three','four','five']
+    li.switch-option(data-code=val)
+     a.button-sort= index + ': ' + val
