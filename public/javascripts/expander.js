@@ -6,8 +6,8 @@ $(
     function expander() {
 
         var storage = localStorage;
-        var container = $('.folder');
-        var header = $('.folder-header');
+        var container = $('.expander');
+        var header = $('.expander-header');
         var expanded, key = 'expanded';
 
         var value = storage[key];

@@ -73,7 +73,7 @@ body{
   min-height: 400px;
   padding: 1em;
   margin: 2em;
-  box-shadow: inset -3pt 4pt 7pt -4pt #CBCBCC;
+  box-shadow: inset 3pt 4pt 7pt -4pt #CBCBCC;
 
   .container{
     .text{
@@ -287,6 +287,7 @@ body{
 .p-section{
   clear: both;
   padding: 2em;
+  background-color: #fff;
 
   p{
     float: none;
@@ -295,6 +296,12 @@ body{
 .line-section {
   .p-section();
   box-shadow: 0 0 1pt #D6C9D6;
+  margin-bottom: 20pt;
+}
+
+.form-field-input{
+  display: block;
+  margin: 5pt 0;
 }
 /*content-description*/
 
@@ -349,3 +356,105 @@ body{
 
 }
 /*selector*/
+
+/*expander*/
+.expander-container{
+    background-color: inherit;
+    position: relative;
+    margin: 10px 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+  .expander{
+    display: block;
+    padding: 5px;
+    margin-right: 20px;
+    background-color: inherit;
+
+    .expander-header{
+      border-bottom: 1px solid #E4E4E4;
+      height: .4em;
+      margin-bottom: .5em;
+      position: relative;
+      background-color: inherit;
+      cursor: pointer;
+
+      .expander-title{
+        padding: 0 5px;
+        position: absolute;
+        left: 9px;
+        z-index: 20;
+        cursor: pointer;
+        color: #A6C0CB;
+        font-size: 9pt;
+        background-color: inherit;
+      }
+
+      .expander-title:before{
+        content: '\24E5';
+        position: absolute;
+        font-size: 17pt;
+        height: 28px;
+        width: 24px;
+        left: -36px;
+        top: -8px;
+        color: #E4E4E4;
+        /* background: rgba(0, 0, 0, 0) url(../images/folder-expanded.png) no-repeat center center; */
+        background-color: inherit;
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+
+    }
+    .expander-content{
+      overflow: hidden;
+      height: 0;
+      opacity: 0;
+      position: relative;
+    }
+  }
+
+  .expander.expanded{
+    .expander-header{
+      border-bottom: 1px solid #E4E4E4;
+
+      .expander-title{
+        color: #7F8F96;
+      }
+
+      .expander-title:before{
+        content: '\24E5';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        font-size: 17pt;
+        left: -33px;
+        top: -10px;
+        color: #7F8F96;
+        /* background: url(../images/folder.png) no-repeat center center; */
+        background-color: inherit;
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+    }
+    .expander-content{
+      height: 100%;
+      opacity: 1;
+      padding: 5px;
+    }
+  }
+}
+.expander-container .animated .expander-title:before, .expander-container .expanded.animated .expander-title:before {
+  transition: transform .5s linear;
+}
+
+.expander.animated .expander-container {
+  transition: opacity 2.5s ease-out,
+  height 2.5s linear;
+}
+/*expander*/

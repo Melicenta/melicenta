@@ -4,3 +4,21 @@ span.form-field-input
    each val, index in ['one', 'two', 'three','four','five']
     li.switch-option(data-code=val)
      a.button-sort= index + ': ' + val
+ p.inline-text.
+  Multi select control
+span.form-field-input
+ div.select.mutual
+  ul
+   each val, index in ['one', 'two', 'three','four','five']
+    li.switch-option(data-code=val)
+     a.button-sort= index + ': ' + val
+  p.inline-text.
+   Mutual select control
+span.form-field-input
+ div.select.single
+  ul
+   each val, index in ['one']
+    li.switch-option(data-code=val)
+     a.button-sort= index + ': ' + val
+  p.inline-text.
+   Single select control
