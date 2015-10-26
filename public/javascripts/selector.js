@@ -2,12 +2,12 @@
  * Created by denezhnaya on 28.07.2015.
  */
 
-function selector(button,option,state) {
+function selector(button,option,data) {
     var item = $(button),
     /*selector button*/
         container = $(button).parent('ul').parent('.select'),
     /*selector container with css class "select"*/
-        multiSelect,mutualSwitch,saveState,setDefault,getData;
+        multiSelect,mutualSwitch;
     /*selector types*/
 
 
@@ -24,40 +24,43 @@ function selector(button,option,state) {
         check();
     };
 
-    setDefault = function (){
-      var first = container.find('li:first');
-        first.addClass('checked');
-    };
 
-    getData = function (){
-        //not realized yet
-    }
-
-    var check = function () {
+    var check = function (){
         item.addClass('checked');
     };/*set checked*/
 
-    var unchecked = function () {
+    var unchecked = function (){
         item.removeClass('checked');
     };/* set to default*/
 
-    var unselected =  function () {
+    var unselected =  function (){
         container.find('li').removeClass('checked');
     };
 
 
+    var setSelections = function (data){
+        data.each(function (){
+            $(this).addClass('checked');
+        });
+    };
+
     return {
 
-        init: function () {
+        init: function (){
             if (option === true){
                 multiSelect();
                 return this;
-            } else if (option === false){
+            } else if (option === false || option === undefined){
                 mutualSwitch();
                 return this;
             }
+            if (data !== undefined){
+                setSelections();
+            }
 
-            state ? setDefault() : getData();
+        },
+        set: function (){
+            setSelections(data);
         }
     }
 }
@@ -67,8 +70,8 @@ $(function () {
         var button2 = $('.mutual .switch-option');
         var button3 = $('.single .switch-option');
 
-        /*initialisation*/
-        selector(button3,true,true).init();
+        /*initialisation with default selections*/
+        selector($('.switch-option'),true,$('[data-code = one]')).set();
 
 
         /*button triggers*/
@@ -81,7 +84,7 @@ $(function () {
         }); /*with mutual switch option*/
 
         button3.on('click', function () {
-            selector($(this),true,true).init();
+            selector($(this),true).init();
         });/*multi-select option provides self switch off function, in this case the single buttons are used*/
 
     }
