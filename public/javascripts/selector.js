@@ -54,9 +54,6 @@ function selector(button,option,data) {
                 mutualSwitch();
                 return this;
             }
-            if (data !== undefined){
-                setSelections();
-            }
 
         },
         set: function (){

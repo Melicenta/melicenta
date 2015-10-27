@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET Home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: "About me" });
 });
@@ -12,8 +12,8 @@ router.get('/origin', function(req, res) {
 });
 
 /* GET Portfolio page. */
-router.get('/portfolio', function(req, res) {
-  res.render('pages/portfolio', { title: "Portfolio" });
+router.get('/resume', function(req, res) {
+  res.render('pages/resume', { title: "Resume" });
 });
 
 /* GET Profession page. */
