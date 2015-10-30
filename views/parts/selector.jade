@@ -1,4 +1,13 @@
 span.form-field-input
+    |The SELECT element defines a form control for the selection of options. You can choose one option at a time or use multiselect type of this.
+    |This element can not be well-styled with a standard CSS way. I don't like tricks, so my colleague and I developed this controls called SELECTORS.
+p.inline-text
+    a(href='https://github.com/Melicenta/controls/blob/master/scripts/selector.js')
+     | Source code is here (JS)
+    |&nbsp; and &nbsp;
+    a(href='https://github.com/Melicenta/controls/blob/master/styles/select.css')
+     | here (CSS)
+span.form-field-input
  div.select.multi
   ul
    each val, index in ['one', 'two', 'three','four','five']
@@ -15,10 +24,20 @@ span.form-field-input
   p.inline-text.
    Mutual select control
 span.form-field-input
- div.select.single
+ div.select.single.purple
   ul
-   each val, index in ['one']
+   each val, index in ['six']
     li.switch-option(data-code=val)
-     a.button-sort= index + ': ' + val
-  p.inline-text.
+     a.button-sort= val
+ div.select.single.gold
+  ul
+   each val, index in ['seven']
+    li.switch-option(data-code=val)
+     a.button-sort= val
+ div.select.single.cyan
+  ul
+   each val, index in ['eight']
+    li.switch-option(data-code=val)
+     a.button-sort= val
+ p.inline-text.
    Single select control

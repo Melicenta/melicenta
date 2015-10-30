@@ -4,15 +4,16 @@
 
 function selector(button,option,data) {
     var item = $(button),
-    /*selector button*/
+    /* selector button*/
         container = $(button).parent('ul').parent('.select'),
-    /*selector container with css class "select"*/
+    /* selector container with css class "select"*/
         multiSelect,mutualSwitch;
-    /*selector types*/
+    /* selector types*/
+    var selected, used;
 
 
-    var selected = item.hasClass('checked');
-    var used = container.find('li').hasClass('checked');
+    selected = item.hasClass('checked');
+    used = container.find('li').hasClass('checked');
 
 
     multiSelect = function (){
@@ -27,7 +28,7 @@ function selector(button,option,data) {
 
     var check = function (){
         item.addClass('checked');
-    };/*set checked*/
+    };/* set checked*/
 
     var unchecked = function (){
         item.removeClass('checked');
@@ -67,22 +68,24 @@ $(function () {
         var button2 = $('.mutual .switch-option');
         var button3 = $('.single .switch-option');
 
-        /*initialisation with default selections*/
-        selector($('.switch-option'),true,$('[data-code = one]')).set();
+        /* initialisation with default settings*/
+        selector(button1,true,$('[data-code = one]')).set();
+        selector(button3,true,$('[data-code = six]')).set();
+        selector(button3,true,$('[data-code = eight]')).set();
 
 
-        /*button triggers*/
+        /* button triggers*/
         button1.on('click', function () {
             selector($(this),true).init();
-        }); /*with multi select option*/
+        }); /* with multi select option*/
 
         button2.on('click', function () {
             selector($(this),false).init();
-        }); /*with mutual switch option*/
+        }); /* with mutual switch option*/
 
         button3.on('click', function () {
             selector($(this),true).init();
-        });/*multi-select option provides self switch off function, in this case the single buttons are used*/
+        });/* multi-select option provides self switch off function, in this case the single buttons are used*/
 
     }
 );

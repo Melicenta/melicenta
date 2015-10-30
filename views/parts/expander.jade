@@ -1,7 +1,32 @@
+span.form-field-input
+    |This ia an alternative way to separate your content in web-application.
+    |I think it's more useful than tabs.
+ p.inline-text
+  a(href='https://github.com/Melicenta/controls/blob/master/scripts/expander.js')
+   | Source code is here (JS)
+  | &nbsp; and &nbsp;
+  a(href='https://github.com/Melicenta/controls/blob/master/styles/folder.css')
+   | here (CSS)
 div.expander-container
  span.expander.animated
   div.expander-header
    span.expander-title.
-    title
-  div.expander-content.
-   content
+    Expander example
+  div.expander-content
+   table.table
+    thead
+     tr
+      th Pattern
+      th How popular in JS
+    tbody
+     tr
+      td Facade
+      td Medium
+     tr
+      td Factory
+      td Low
+span.form-field-input
+ |The state of this control saves into Local storage. You can clean it if you want
+ p.inline-text
+  span.button.button-clear.silver
+   |Clear storage

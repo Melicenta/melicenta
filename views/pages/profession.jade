@@ -1,5 +1,16 @@
 extends ../layout
 
 block content
- p.title= title
- p Welcome to #{title}
+ div.p-section
+  p.title= title
+  p About job
+ div.line-section
+  |Since 2012 I have been working on a universal web-platform for showing and manipulation with statistics data.
+  |This application was created for analytical research. All rights belong to St.Petersburg information and analytical centre and Government of St. Petersburg - Committee on IT and Communications.
+  |So I can only show you examples of my regular work on this project.
+  include ../parts/universal
+ div.line-section
+  |In 2014 we start to develop platform for thematically Internet search with the subsequent processing of data and the creation of statistics based on them.
+  |This application was created for analytical research. All rights belong to St.Petersburg information and analytical centre and Government of St. Petersburg - Committee on IT and Communications.
+  |So I can only show you examples of my regular work on this project.
+  include ../parts/webminer
