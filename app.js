@@ -1,9 +1,12 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var express = require('express'),
+ path = require('path'),
+ favicon = require('serve-favicon'),
+ logger = require('morgan'),
+ cookieParser = require('cookie-parser'),
+ bodyParser = require('body-parser');
+ mongo = require('mongodb'),
+ monk = require('monk'),
+ db =  monk('127.0.0.1:27017/melicenta', {server: {poolSize: 1}});
 
 
 var routes = require('./routes/index');
@@ -24,6 +27,12 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+// Make our db accessible to our router
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
 
 app.use('/', routes);
 app.use('/users', users);
@@ -60,4 +69,6 @@ app.use(function(err, req, res, next) {
 });
 
 
+
 module.exports = app;
+
