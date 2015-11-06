@@ -4,9 +4,9 @@ var express = require('express'),
  logger = require('morgan'),
  cookieParser = require('cookie-parser'),
  bodyParser = require('body-parser');
- mongo = require('mongodb'),
- monk = require('monk'),
- db =  monk('127.0.0.1:27017/melicenta', {server: {poolSize: 1}});
+ //mongo = require('mongodb'),
+// monk = require('monk'),
+ //db =  monk('127.0.0.1:27017/melicenta', {server: {poolSize: 1}});
 
 
 var routes = require('./routes/index');
@@ -28,14 +28,14 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// Make our db accessible to our router
-app.use(function(req,res,next){
-    req.db = db;
-    next();
-});
+//// Make our db accessible to our router
+//app.use(function(req,res,next){
+//    req.db = db;
+//    next();
+//});
 
 app.use('/', routes);
-app.use('/users', users);
+//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

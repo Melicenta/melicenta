@@ -1,27 +1,29 @@
 //
    Created by denezhnaya on 02.11.2015.
+    /*database practise does not use in this case*/
 extends ../layout
 block append scripts
  script(src='/javascripts/global.js')
 
 block content
- h1.
-  User List
- ul.users
+ div.p-section
+  h1 User List
+  ul.users
    each user, i in userlist
     li: a(href="mailto:#{user.email}")= user.username
 
     // USER LIST
- #userList
-  table
-   thead
-    th UserName
-    th Email
-    th Delete?
-   tbody
+  #userList
+   table
+    thead
+     th UserName
+     th Email
+     th Delete
+     th Edit
+    tbody
 
- #userInfo
-  h2 User Info
+  #userInfo
+   h2 User Info
   p
    strong Name:
     |  <span id='userInfoName'></span>
@@ -35,18 +37,34 @@ block content
    strong Location:
     |  <span id='userInfoLocation'></span>
 
- // ADD USER
- h2 Add User
- #addUser
-  fieldset
-   input#inputUserName(type='text', placeholder='Username')
-   input#inputUserEmail(type='text', placeholder='Email')
-   br
-   input#inputUserFullname(type='text', placeholder='Full Name')
-   input#inputUserAge(type='text', placeholder='Age')
-   br
-   input#inputUserLocation(type='text', placeholder='Location')
-   input#inputUserGender(type='text', placeholder='gender')
-   br
-   button#btnAddUser Add User
-// /ADD USER
+  // /ADD USER
+  h2 Add User
+  #addUser
+   fieldset
+    input#inputUserName(type='text', placeholder='Username')
+    input#inputUserEmail(type='text', placeholder='Email')
+    br
+    input#inputUserFullname(type='text', placeholder='Full Name')
+    input#inputUserAge(type='text', placeholder='Age')
+    br
+    input#inputUserLocation(type='text', placeholder='Location')
+    input#inputUserGender(type='text', placeholder='gender')
+    br
+    button#btnAddUser Add User
+   // /ADD USER
+
+   // /EDIT USER
+  h2 Edit User
+  #editUser
+   fieldset
+    input(type='text', placeholder='editUsername', id='editUsername')
+    input(type='text', placeholder='editEmail', id='editEmail')
+    br
+    input(type='text', placeholder='editFullName', id='userEditFullname')
+    input(type='text', placeholder='editAge', id='userEditAge')
+    br
+    input(type='text', placeholder='editLocation', id='userEditLocation')
+    input(type='text', placeholder='editGender', id='userEditGender')
+    br
+    button#btnEditUser Edit User
+ // /EDIT USER
