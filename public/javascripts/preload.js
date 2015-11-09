@@ -1,7 +1,7 @@
 /**
  * Created by denezhnaya on 06.11.2015.
  */
-$(window).load(function (){
+$(function (){
     var b = $('body');
     var img = $('.bc');
     $('.preloader').css('display','block');
