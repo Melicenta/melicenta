@@ -6,7 +6,8 @@ $(function (){
     var img = $('.bc');
     $('.preloader').css('display','block');
     $.ajax({
-        url:'/images/RxSUX.png',
+        method: 'GET',
+        url:'/',
         context: document.body
     }).done(function (){
         b.css('background-image','url(/images/RxSUX.png)');
