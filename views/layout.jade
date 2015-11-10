@@ -2,11 +2,6 @@ doctype html
 html
   head
     title= "Melicenta's personal page"
-    block scripts
-     //script(src='/javascripts/jquery-ui-1.11.4/external/jquery/jquery.js')
-     script(src='/javascripts/preload.js')
-     script(src='/javascripts/jquery-ui-1.11.4/jquery-ui.js')
-     script(src='/javascripts/menu.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic&subset=latin,cyrillic,latin-ext,cyrillic-ext', rel='stylesheet')
   //   script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js')
@@ -21,4 +16,9 @@ html
        div.container
         block content
     include parts/footer
+  block scripts
+   script(src='/javascripts/preload.js')
+
+
+
 

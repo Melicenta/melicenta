@@ -1,25 +1,33 @@
 /**
  * Created by denezhnaya on 06.11.2015.
  */
+
+var preloader = document.getElementsByClassName('preloader')[0];
+preloader.style.display = 'block';
+
 var script = document.createElement('script');
 script.src = "/javascripts/jquery-ui-1.11.4/external/jquery/jquery.js";
-document.head.appendChild(script);
+document.body.appendChild(script);
+
 
 function afterLoad() {
-    $('.preloader').css('display', 'block');
-    alert("Загрузка завершена: " + typeof(jQuery));
-    var b = $('body');
+    //alert("Загрузка завершена: " + typeof(jQuery));
     var img = document.createElement('img');
+    var scripts = ['/javascripts/jquery-ui-1.11.4/jquery-ui.js','/javascripts/menu.js'];
+    scripts.forEach(function(src) {
+        var script = document.createElement('script');
+        script.src = src;
+        document.head.appendChild(script);
+    });
 
     img.onload = function () {
-        alert("Успех " + this.src);
-        //b.css('background-image','url(this.src)');
-        $('.preloader').css('display','none');
+        //alert("Успех " + this.src);
     };
 
     img.onerror = function () {
-        alert("Ошибка " + this.src);
-    }
+       // alert("Ошибка " + this.src);
+    };
+
     img.src = '/images/RxSUX.png'
 }
 
@@ -39,3 +47,38 @@ script.onreadystatechange = function() {
     }
 };
 
+window.onload = function () {
+    $('.preloader').css('display', 'none');
+
+
+    /*controls scripts*/
+
+    var button1 = $('.multi .switch-option');
+    var button2 = $('.mutual .switch-option');
+    var button3 = $('.single .switch-option');
+
+    /* initialisation with default settings*/
+    selector(button1,true,$('[data-code = one]')).set();
+    selector(button3,true,$('[data-code = six]')).set();
+    selector(button3,true,$('[data-code = eight]')).set();
+
+
+    /* button triggers*/
+    button1.on('click', function () {
+        selector($(this),true).init();
+    }); /* with multi select option*/
+
+    button2.on('click', function () {
+        selector($(this),false).init();
+    }); /* with mutual switch option*/
+
+    button3.on('click', function () {
+        selector($(this),true).init();
+    });/* multi-select option provides self switch off function, in this case the single buttons are used*/
+
+
+
+    expander();
+
+    /*controls scripts*/
+}

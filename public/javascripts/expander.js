@@ -2,7 +2,7 @@
  * Created by denezhnaya on 28.07.2015.
  */
 
-$(
+
     function expander() {
 
         var storage = localStorage;
@@ -38,7 +38,7 @@ $(
         $('.button-clear').on('click', function () {
             storage.clear();
         });
-    });
+    }
 
 
 
