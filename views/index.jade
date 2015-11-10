@@ -1,12 +1,10 @@
-extends layout
-//block append scripts
-//    script(src='/javascripts/preload.js')
-block content
- div.p-section
-  p.title= title
- div.p-section
-  p.img: img(src='/images/mel.jpg')
-  p.inline-text.
-   Hello! My name is Lena. I'm a frond-end developer/UX-designer from St.Petersburg.
-   I love my job. Can you imagine some wonderful and extraordinary things? Well, now keep it your mind and remember about routine, ado, tiredness.
-   Oh, now just add to this mix some joy of the performed work and limitless creativity. You can see little examples of my works in this site. Enjoy!
+doctype html
+html
+    head
+        title= "Melicenta's personal page"
+        block scripts
+            script(src='/javascripts/jquery-ui-1.11.4/external/jquery/jquery.js')
+            script(src='/javascripts/jquery-ui-1.11.4/jquery-ui.js')
+        include pages/about
+        div.preloader
+         img.bc(src="/images/preload.gif" )
