@@ -9,6 +9,7 @@ var script = document.createElement('script');
 script.src = "/javascripts/jquery-ui-1.11.4/external/jquery/jquery.js";
 document.body.appendChild(script);
 
+var titleText = document.getElementsByClassName('title')[0].innerHTML;
 
 function afterLoad() {
     //alert("Загрузка завершена: " + typeof(jQuery));
@@ -29,6 +30,10 @@ function afterLoad() {
     };
 
     img.src = '/images/RxSUX.png'
+
+    if (titleText === 'Origin'){
+        showLoader();
+    }
 }
 
 script.onload = script.onerror = function() {
@@ -47,12 +52,31 @@ script.onreadystatechange = function() {
     }
 };
 
+
+function showLoader(){
+    $('.img').each(function (){
+        var self = $(this);
+        var img = self.find('img');
+        img.onload = function (){
+            preloadCircle(p);
+        };
+        img.onerror = function (){
+            $(this).hide();
+            self.innerHTML('<p>Nothing to show</p>')
+        };
+    });
+}
+
+function preloadCircle(block){
+    $(block).append('<div class="preload-circle"><div class="circle-outer"><div class="circle-inner">Wait for it</div></div></div>');
+}
+
+
 window.onload = function () {
     $('.preloader').css('display', 'none');
 
-
     /*controls scripts*/
-
+  if (titleText === 'Exquisite experience'){
     var button1 = $('.multi .switch-option');
     var button2 = $('.mutual .switch-option');
     var button3 = $('.single .switch-option');
@@ -79,6 +103,7 @@ window.onload = function () {
 
 
     expander();
-
+}
     /*controls scripts*/
+
 }
