@@ -1,3 +1,8 @@
+/* TO DO: refactor following code so that the styles are logically divided.*/
+/* Exp: font-styles, colour-styles, layout-styles, component-styles.       */
+/* All rules can be reused in different ways                               */
+/* Use particular files and @include directive to separate those points    */
+
 
 /*colours*/
 .purple {
@@ -126,7 +131,7 @@ body{
   background-attachment: fixed;
   background-origin: initial;
   background-clip: initial;
-  background-color: #232323;
+/*  background-color: #232323;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -160,7 +165,7 @@ body{
 
   p{
     font-family: Georgia, serif;
-    font-size: 18pt;
+    font-size: 30pt;
     font-style: oblique;
    /* color: #967A96;/*purple scheme*/
     color: #967A96;/*green scheme*/
@@ -200,7 +205,7 @@ body{
       width: 100%;
       margin-bottom: 6pt;
     }
-
+    
   }
 
 }
@@ -440,6 +445,8 @@ body{
   p.inline-text{
     padding: 25px 50px;
     width: 70%;
+    flex: 1;
+    font-size: 16pt;
   }
 }
 
@@ -451,6 +458,27 @@ body{
   p{
     float: none;
   }
+  
+  /*should be pattern like*/
+    & + .one{
+      
+    }
+    
+    & + .two{
+      display: flex;
+    }
+
+    & + .three{
+      
+    }
+    
+    & +  .four{
+      
+    }
+    
+    & + .more-than-five{
+      
+    }  
 }
 .line-section {
   .p-section();
