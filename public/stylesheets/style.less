@@ -124,7 +124,6 @@ body{
 
   background-image: url(/images/mel.jpg);
   background-position-x: 50%;
-  background-position-y: 50%;
   background-size: cover;
   background-repeat-x: no-repeat;
   background-repeat-y: no-repeat;
@@ -136,6 +135,26 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   //opacity: 0.9;
+  
+  & + about{
+    background-position-y: 20%;
+  }
+  
+  & + origin{
+    background-position-y: 30%;
+  }
+  
+  & + resume{
+    background-position-y: 40%;
+  }
+  
+  & + experience{
+    background-position-y: 50%;
+  }
+  
+  & + profession{
+    background-position-y: 20%;
+  }
 }
 
 .wrapper{
