@@ -9,12 +9,13 @@ html
   //  script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js')
   //  script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js')
 
-
-  body
+- var bodyClass = "Layout";
+ 
+  body.#{bodyClass}
     include parts/header
-     .wrapper
-       .content
-        .container
+     div.wrapper
+      div.content
+       div.container
          block content
     include parts/footer
   block scripts
